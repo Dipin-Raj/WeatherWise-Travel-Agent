@@ -1,10 +1,18 @@
-# Multi-Agent Weather & Travel Assistant
+# 🌍 WeatherWise Travel Agent ✈️
 
-## Overview
+[![GitHub](https://img.shields.io/badge/GitHub-Repo-blue?style=flat&logo=github)](https://github.com/Dipin-Raj/WeatherWise-Travel-Agent.git)
+
+---
+
+## Overview 📝
 
 This project is a Python-based multi-agent system designed to provide a comprehensive travel assistant service. Given a location and a number of days, the system leverages a series of specialized agents to fetch a weather report, provide safety and practical precautions, and generate a detailed travel itinerary.
 
-## Features
+## 🌐 Live Demo
+
+Experience the live deployed version here: [WeatherWise Travel Agent](https://weatherwise-travel-agent.streamlit.app/)
+
+## Features ✨
 
 -   **Natural Language Queries:** Understands natural language queries to extract location information (e.g., "planning a trip to Paris").
 -   **Agent 1: Weather Reporter:** Fetches real-time weather forecast data.
@@ -13,7 +21,7 @@ This project is a Python-based multi-agent system designed to provide a comprehe
 -   **Interactive Input:** Prompts the user for location and duration.
 -   **Secure API Key Management:** Uses a `.env` file to securely manage API keys.
 
-## Architecture
+## Architecture 🏛️
 
 The system is designed with a simple, sequential multi-agent architecture. The output of each agent serves as the input for the next, creating a processing pipeline.
 
@@ -33,77 +41,101 @@ The system is designed with a simple, sequential multi-agent architecture. The o
     -   Uses the Google Gemini API to generate a detailed, day-by-day travel itinerary.
     -   The final output is then printed to the user.
 
-## Technologies & Libraries Used
+## Technologies & Libraries Used 🛠️
 
 -   **Python 3:** The core programming language.
 -   **`requests`:** A standard library for making HTTP requests to the various APIs.
 -   **`google-genai`:** The official Google Python SDK for interacting with the Gemini family of models, used for the intelligent analysis and generation tasks.
 -   **`python-dotenv`:** Used to load environment variables from a `.env` file, allowing for secure and flexible management of API keys.
 
-## APIs Used
+## APIs Used 🌐
 
 -   **Nominatim (OpenStreetMap):** A free geocoding service used to convert location names (e.g., "London") into geographical coordinates (latitude and longitude).
 -   **OpenWeatherMap API:** Used to fetch current and forecasted weather data for the specified coordinates. Requires a free API key.
 -   **Google Gemini API:** A powerful large language model (LLM) used by Agent 1, Agent 2 and Agent 3 to generate human-like text for precautions and itineraries based on the provided context. Requires a free API key from Google AI Studio.
 
-## Setup and Installation
+
+### 🚀 Setup & Installation
 
 1.  **Clone the Repository:**
     ```bash
-    git clone <repository-url>
-    cd <repository-directory>
+    git clone https://github.com/Dipin-Raj/WeatherWise-Travel-Agent.git
+    cd WeatherWise-Travel-Agent
     ```
 
-2.  **Create a Virtual Environment:** It is highly recommended to use a virtual environment to manage project dependencies.
+2.  **Create Virtual Environment:**
     ```bash
     python -m venv venv
     ```
 
-3.  **Activate the Virtual Environment:**
-    -   On Windows:
+3.  **Activate Environment:**
+    -   **Windows:**
         ```bash
         .\venv\Scripts\activate
         ```
-    -   On macOS/Linux:
+    -   **macOS / Linux:**
         ```bash
         source venv/bin/activate
         ```
 
-4.  **Install Dependencies:** Install all the required libraries from the `requirements.txt` file.
+4.  **Install Dependencies:**
     ```bash
     pip install -r requirements.txt
     ```
 
-5.  **Configure API Keys:**
-    -   This project requires two API keys. Create a file named `.env` in the project root.
-    -   Copy the contents of `.env.example` into your new `.env` file.
-    -   **`WEATHER_API_KEY`**: Get your key from [OpenWeatherMap](https://openweathermap.org/api).
-    -   **`GEMINI_API_KEY`**: Get your key from [Google AI Studio](https://aistudio.google.com/app/apikey).
-    -   Replace the placeholder text in the `.env` file with your actual keys.
-    
-    Your `.env` file should look like this:
-    ```
-    WEATHER_API_KEY="YOUR_OPENWEATHERMAP_API_KEY"
-    GEMINI_API_KEY="YOUR_GEMINI_API_KEY"
-    ```
+### 🔐 Configure API Keys
 
-## How to Run
+Create a `.env` file in the project root:
 
-Once you have completed the setup, you can run the application with the following command:
+```
+WEATHER_API_KEY="YOUR_OPENWEATHERMAP_API_KEY"
+GEMINI_API_KEY="YOUR_GEMINI_API_KEY"
+```
 
+Get your keys from:
+-   🌦️ **OpenWeatherMap:** [https://openweathermap.org/api](https://openweathermap.org/api)
+-   🤖 **Google Gemini:** [https://aistudio.google.com/app/apikey](https://aistudio.google.com/app/apikey)
+
+### ▶️ How to Run
+
+**Console Application:**
 ```bash
 python main.py
 ```
+*Enter Location & Number of Days when prompted.*
 
-The script will then interactively prompt you to enter the place and the number of days for your trip.
-
-## How to Run Streamlit UI
-
-To run the Streamlit web application, navigate to the project's root directory in your terminal and execute the following command:
-
+**Streamlit Web App:**
 ```bash
 streamlit run app.py
 ```
+*App runs at: [http://localhost:8501](http://localhost:8501)*
 
-This will open the Streamlit application in your web browser, typically at `http://localhost:8501`.
+### 📂 Project Structure
 
+```
+.
+├── app.py                # Streamlit web application interface
+├── main.py               # Orchestrates the multi-agent system
+├── README.md             # Project README
+├── requirements.txt      # Python dependencies
+├── agent1/
+│   ├── __init__.py
+│   └── weather_agent.py  # Agent for fetching weather data
+├── agent2/
+│   ├── __init__.py
+│   └── precaution_agent.py # Agent for providing precautions
+└── agent3/
+    ├── __init__.py
+    └── itinerary_agent.py  # Agent for generating travel itineraries
+```
+
+### ❤️ Contributing
+
+Contributions are welcome! Feel free to:
+-   ⭐ Star the repo
+-   🐛 Report bugs
+-   💡 Suggest features
+
+### 📜 License
+
+This project is for educational and learning purposes.
