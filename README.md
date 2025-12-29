@@ -1,6 +1,13 @@
 # 🌍 WeatherWise Travel Agent ✈️
 
 [![GitHub](https://img.shields.io/badge/GitHub-Repo-blue?style=flat&logo=github)](https://github.com/Dipin-Raj/WeatherWise-Travel-Agent.git)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
+![OpenWeather](https://img.shields.io/badge/OpenWeather-FF8C00?style=for-the-badge&logo=OpenWeather&logoColor=white)
+![Google Gemini](https://img.shields.io/badge/Google%20Gemini-4285F4?style=for-the-badge&logo=google&logoColor=white)
+![OpenStreetMap](https://img.shields.io/badge/OpenStreetMap-7EBC6F?style=for-the-badge&logo=openstreetmap&logoColor=white)
+![Requests](https://img.shields.io/badge/Requests-000000?style=for-the-badge&logo=python&logoColor=white)
+![Dotenv](https://img.shields.io/badge/python--dotenv-3670A0?style=for-the-badge&logo=dotenv&logoColor=white)
 
 ---
 
