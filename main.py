@@ -19,7 +19,7 @@ def main():
         print("Error: GEMINI_API_KEY not found in .env file or environment variables.")
         return
         
-    query = input("=====Enter your query (e.g., 'I am planning a trip to Kochi'): ===")
+    query = input("===Enter your query (e.g., 'I am planning a trip to Kochi'): ===")
     days = int(input("Enter the number of days for the forecast and itinerary: "))
 
     weather_report, extracted_place_name, weather_logs = get_weather(query, days, weather_api_key, gemini_api_key)
