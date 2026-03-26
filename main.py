@@ -30,7 +30,7 @@ def main():
         return
 
     print(f"\nGetting weather for {extracted_place_name} for {days} days...")
-    print("Weather Report:")
+    print("=== WEATHER REPORT ===")
     print(weather_report)
 
     if "this place is in-serviceable" in weather_report:
